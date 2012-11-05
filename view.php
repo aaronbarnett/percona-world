@@ -32,7 +32,7 @@ Class View {
         
         foreach($cities as $city) {
             $result .= sprintf('<tr><td>%s</td><td>%s</td><td>%s</td></tr>', 
-                    $city['name'], $city['district'], $city['population']);
+                    $city['Name'], $city['District'], $city['Population']);
         }
         
         $result .= '</tbody>';
@@ -60,12 +60,16 @@ Class View {
             <?php echo $this->country_list($countries, $form['country']); ?>
             <!-- order -->
             Ordered by:
+			<label>
             <input type="radio" name="ordered" value="Population" 
                 <?php echo $form['ordered'] != "Name"?'checked = "checked"':''; ?>
                 />Population
+			</label>
+			<label>
             <input type="radio" name="ordered" value="Name" 
                 <?php echo $form['ordered'] == "Name"?'checked = "checked"':''; ?>
                 />Name
+			</label>
             <input type="submit" name="send" value="Show cities">
         </form>
         <!-- Cities table, if any results -->

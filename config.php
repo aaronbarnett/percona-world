@@ -1,7 +1,7 @@
 <?php
-/*
-$host     = '';
-$user     = '';
+
+$host     = 'localhost';
+$user     = 'root';
 $password = '';
-$database = '';
-*/
+$database = 'world';
+
